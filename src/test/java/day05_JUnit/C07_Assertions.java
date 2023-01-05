@@ -19,33 +19,28 @@ public class C07_Assertions {
 //    assertFalse(False)--->Passed
 //    assertFalse(True)--->Failed
 
-    WebDriver driver ;
-
+    WebDriver driver;
     @Before
-    public void setUp(){
+    public void setup(){
         WebDriverManager.chromedriver().setup();
-        driver= new ChromeDriver();
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-        //    https://www.amazon.com adresine gidin
-        driver.get(" https://www.amazon.com");
+        driver.get("https://amazon.com");
     }
-
     @After
     public void tearDown() throws InterruptedException {
-        Thread.sleep(3000);
-        driver.close();
+        //Thread.sleep(3000);
+        //driver.close();
     }
-
-//3)Aşağıdaki adları kullanarak 3 test metodu oluşturun ve gerekli testleriyapin
-//○ title Test  => Sayfa başlığının “YouTube” oldugunu testedin
-
-//○ image Test => YouTube resminin görüntülendiğini (isDisplayed()) testedin
-
-//○ Search Box 'in erisilebilir oldugunu test edin(isEnabled())
-//○ wrongTitleTest => Sayfa basliginin “youtube” olmadiginidogrulayin
-
-
+    /*
+    2)https://amazon.com adresinegidin
+    3)Aşağıdaki adları kullanarak 3 test metodu oluşturun ve gerekli testleriyapin
+            ○ title Test  => Sayfa başlığının "Amazon" oldugunu test edin
+            ○ image Test => Amazon resminin görüntülendiğini (isDisplayed()) test edin
+            ○ Search Box 'in erisilebilir oldugunu test edin(isEnabled())
+            ○ wrongTitleTest => Sayfa basliginin "amazon" olmadiginidogrulayin
+     */
     @Test
     public void test01(){
         String actualTitle = driver.getTitle();
@@ -59,8 +54,14 @@ public class C07_Assertions {
     }
     @Test
     public void test03(){
-
-}
+        WebElement serchBox = driver.findElement(By.xpath("//*[@id='twotabsearchtextbox']"));//erisilebilirmi
+    }
+    @Test
+    public void test04(){
+        String actualTitle = driver.getTitle();
+        String expectedTitle = "amazon";
+        Assert.assertFalse(actualTitle.contains(expectedTitle));
+    }
 
 
 }

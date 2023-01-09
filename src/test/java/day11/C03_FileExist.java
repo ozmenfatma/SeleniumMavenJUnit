@@ -18,7 +18,7 @@ public class C03_FileExist {
         String dosyaYolu = userHOME+"\\OneDrive\\Masaüstü\\logo.jpeg";
 //        String dosyaYolu = userHOME +"\\Desktop\\logo.jpeg";
         System.out.println(dosyaYolu);
-        boolean isExist = Files.exists(Paths.get(dosyaYolu));//doyda var ise tru, yok ise false
+        boolean isExist = Files.exists(Paths.get(dosyaYolu));//dosya  var ise true, yok ise false
         Assert.assertTrue(isExist);
         /*
         1. fail -> PATH YANLIS : dosya masa ustunde degil, dosya adi yanlis, yada arada onedrive gibi ex dosyalar olarak

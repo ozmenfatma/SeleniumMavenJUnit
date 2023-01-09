@@ -1,4 +1,4 @@
-package grupcalismasi;
+package odevler;
 
 import Utilities.TestBase;
 import org.junit.Assert;
@@ -79,6 +79,8 @@ public class test01 extends TestBase {
             System.out.println(actualTitle.getText());
             String  actualTitleText =actualTitle.getText();
             Assert.assertEquals(actualTitleText,ikinciUrunTitleText);
+
+
         }
     }
     }

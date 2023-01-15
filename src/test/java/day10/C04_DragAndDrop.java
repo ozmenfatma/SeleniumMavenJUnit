@@ -55,9 +55,9 @@ public class C04_DragAndDrop extends TestBase {
 //        dragAndDrop() surukleme islemini gerceklestirir
         Actions actions = new Actions(driver);
         actions.
-                clickAndHold(kaynak).
+                clickAndHold(kaynak).// kaynagi tut
                 moveByOffset(430,30)
-                .release()
+                .release() // kaynagi birak
                 .build()
                 .perform();
         waitFor(5);

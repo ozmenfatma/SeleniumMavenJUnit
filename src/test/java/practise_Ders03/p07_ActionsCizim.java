@@ -1,15 +1,19 @@
 package practise_Ders03;
 
 import Utilities.TestBase;
+import org.junit.Test;
 
 public class p07_ActionsCizim extends TestBase {
 
-    /*
-    - http://szimek.github.io/signature_pad/ sayfasına gidiniz
-    - Çıkan ekrana istediğiniz çizgi yada şekli çiziniz
-    - Son olarak sayfayı temizleyiniz
-     */
+    @Test
+    public void test() {
 
 
+//- http://szimek.github.io/signature_pad/ sayfasına gidiniz
+        driver.get("http://szimek.github.io/signature_pad/");
 
+//- Çıkan ekrana istediğiniz çizgi yada şekli çiziniz
+//-Cizimden sonra clear butonuna basalim
+//- Son olarak sayfayı temizleyiniz
+    }
 }

@@ -38,7 +38,7 @@ public class C03_ExtentReports extends TestBase {
 //        creating extent reports object for generating the Entire reports with configuration
             extentReports = new ExtentReports();
 //       *************************************RAPORU CUSTOMIZE EDEBILIRIZ*********************
-            extentReports.setSystemInfo("Test Environment","Regression");
+            extentReports.setSystemInfo("Test Environment","Regression"); // key
             extentReports.setSystemInfo("Application","TechPro Education");
             extentReports.setSystemInfo("Browser","Chrome");
             extentReports.setSystemInfo("Takim","Eagles");

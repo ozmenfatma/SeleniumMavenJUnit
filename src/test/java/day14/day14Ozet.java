@@ -12,9 +12,11 @@ public class day14Ozet {
     Otomasyon raporları almak icin kullanılır.
     Extent report ayrı bir API dir. Extent reports seleniumin disindada kullanilabirlar.  Bu API dan gelen metotlar yardımıyla rapor sablonu oluşturabilir.
 3 class kullandık
-ExtentReports -> sablonu olusturu
+
+    ExtentReports -> sablonu olusturur   protected ***farklı package den ulasılmasın dıye protected
     ExtentHTMLReporter -> sablonu projeye ekler
-    ExtentTest -> raporlama islemini yapar. Loglari rapora yazdırir.
+    ExtentTest -> raporlama islemini yapar. Loglari rapora yazdırir. loglama raporu yazdırma
+
     */
 
 }

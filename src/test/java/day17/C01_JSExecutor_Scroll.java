@@ -14,13 +14,16 @@ public class C01_JSExecutor_Scroll extends TestBase {
 
         driver.get("https://www.techproeducation.com");
         waitFor(3);
+
 //        1. Elementi bul
         WebElement weOffer = driver.findElement(By.xpath("//span[.='we offer']"));
         waitFor(3);
+
 //        2. JS executor objesi olustur
         JavascriptExecutor js = (JavascriptExecutor)driver;
 //        3. Yapmak istedigim islemi js.executeScript metot u ile yap
 //        scrollIntoView(true); metotu belirli bir elemente scroll yapmak icin kullanilir
+
         js.executeScript("arguments[0].scrollIntoView(true);",weOffer);
         waitFor(3);
         //argument[0] ilk parametreki element demek

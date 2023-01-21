@@ -1,5 +1,8 @@
 package day15;
 import Utilities.TestBase;
+import day18.C02_Log4J;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -7,7 +10,7 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 public class C02_WebTables extends TestBase{
-
+    private static Logger logger = LogManager.getLogger(C02_WebTables.class.getName());
     @Test
     public void test() {
 //        https://the-internet.herokuapp.com/tables
@@ -16,7 +19,9 @@ public class C02_WebTables extends TestBase{
 //        Task 1 : Table1’i print edin
 
         String table1 = driver.findElement(By.xpath("//*[@id='table1']")).getText();
-        System.out.println("TABLE 1 VERILERI");
+       // System.out.println("TABLE 1 VERILERI");
+        logger.info("Table 1 Verileri");
+
         System.out.println(table1);
 
 //        List<WebElement> table01=driver.findElements(By.xpath("//table[@id='table1']"));
